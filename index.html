@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="theme-color" content="#1c5a7d" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Bloobloom" />
+  </head>
+  <body>
+    <div id="app"></div>
+    <!--    next line fix for https://stackoverflow.com/questions/72075742/error-with-web3js-nodejs-utils-in-vite-react-ts-app-how-to-resolve-typeerror-->
+    <script>
+      window.global = window
+    </script>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
