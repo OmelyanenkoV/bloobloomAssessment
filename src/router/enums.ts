@@ -1,11 +1,15 @@
 export enum RoutePaths {
-  default = '/default',
-  spectaclesWomen = '/collections/spectacles-women',
-  sunglassesWomen = '/collections/sunglasses-women'
+  collections = '/collections',
+  spectaclesWomen = 'spectacles-women',
+  sunglassesWomen = 'sunglasses-women',
+  spectaclesMan = 'spectacles-man',
+  sunglassesMan = 'sunglasses-man'
 }
 
 export enum RouteNames {
-  default = 'default',
+  collections = 'collections',
   spectaclesWomen = 'spectaclesWomen',
-  sunglassesWomen = 'sunglassesWomen'
+  sunglassesWomen = 'sunglassesWomen',
+  spectaclesMan = 'spectaclesMan',
+  sunglassesMan = 'sunglassesMan'
 }

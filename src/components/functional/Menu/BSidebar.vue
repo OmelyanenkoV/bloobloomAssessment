@@ -19,7 +19,12 @@
     <transition name="slide-second">
       <div v-if="secondaryMenuItem" id="sidebarSecond" class="sidebar-second">
         <ul class="list">
-          <li v-for="item in secondaryMenuItem.subMenu" :key="item.id" class="item">
+          <li
+            v-for="item in secondaryMenuItem.subMenu"
+            :key="item.id"
+            class="item"
+            @click="router.push({ name: item.routeName })"
+          >
             <span class="title">{{ item.title }}</span>
           </li>
         </ul>
@@ -33,11 +38,14 @@ import { useWindowSize } from '@vueuse/core/index'
 import { computed, Ref, ref } from 'vue'
 
 import { SidebarItemMain } from '@/components/functional/Menu/types'
+import { RouteNames } from '@/router/enums'
 import { useSidebar } from '@/store/Sidebar'
 import { Breakpoints } from '@/utils/breakpoints'
+import { useRouter } from 'vue-router'
 
 const { width } = useWindowSize()
 const sidebar = useSidebar()
+const router = useRouter()
 
 const secondaryMenuItem: Ref<SidebarItemMain | null> = ref(null)
 const isPhoneViewport = computed(() => width.value < Breakpoints.phone)
@@ -49,8 +57,8 @@ const sidebarListMain: SidebarItemMain[] = [
     title: 'Spectacles',
     expand: true,
     subMenu: [
-      { id: 1, title: 'Women' },
-      { id: 2, title: 'Man' }
+      { id: 1, title: 'Women', routeName: RouteNames.spectaclesWomen },
+      { id: 2, title: 'Man', routeName: RouteNames.spectaclesMan }
     ]
   },
   {
@@ -58,8 +66,8 @@ const sidebarListMain: SidebarItemMain[] = [
     title: 'Sunglasses',
     expand: true,
     subMenu: [
-      { id: 1, title: 'Women 2' },
-      { id: 2, title: 'Man 2' }
+      { id: 1, title: 'Women 2', routeName: RouteNames.sunglassesWomen },
+      { id: 2, title: 'Man 2', routeName: RouteNames.sunglassesMan }
     ]
   },
   { id: 3, title: 'Home tray on', expand: false },
