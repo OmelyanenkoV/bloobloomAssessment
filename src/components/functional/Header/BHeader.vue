@@ -1,10 +1,11 @@
 <template>
   <header class="header">
     <div
+      id="menu"
       data-test-id="mobileSidebarController"
       class="menu"
-      @click.prevent="mobileSidebarController"
-      @mouseover="tabletSidebarMouseoverController"
+      @click="mobileSidebarController"
+      @mouseenter="tabletSidebarMouseenterController"
       @mouseleave="tabletSidebarMouseleaveController"
     >
       <span :class="{ underline: sidebar.isOpen }">Menu</span>
@@ -45,14 +46,16 @@ const mobileSidebarController = () => {
   if (isPhoneViewport.value) sidebar.TOGGLE_SIDEBAR()
 }
 
-const tabletSidebarMouseoverController = () => {
+const tabletSidebarMouseenterController = () => {
   if (isTabletViewport.value) sidebar.SET_SIDEBAR_OPEN()
 }
 
 const tabletSidebarMouseleaveController = (e: MouseEvent) => {
   if (e.relatedTarget instanceof HTMLElement) {
-    const mouseOnSidebar = e.relatedTarget.closest('.sidebars')?.classList.value === 'sidebars'
+    const mouseOnSidebar = e.relatedTarget.closest('#sidebars')?.classList.value === 'sidebars'
     if (mouseOnSidebar) return
+    if (isTabletViewport.value) sidebar.TOGGLE_SIDEBAR()
+  } else {
     if (isTabletViewport.value) sidebar.TOGGLE_SIDEBAR()
   }
 }
