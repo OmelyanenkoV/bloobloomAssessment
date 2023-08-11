@@ -1,0 +1,100 @@
+.sidebars {
+  .sidebar-first {
+    position: absolute;
+    top: 61px;
+    left: 0;
+    z-index: 1100;
+    width: 160px;
+    height: calc(100vh - 62px);
+    background-color: $color-white;
+    border: 1px solid $color-black;
+
+    @include media(">phone") {
+      width: 217px;
+    }
+
+    .list {
+      margin: 0;
+
+      .item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        padding-left: 17px;
+        cursor: pointer;
+        border-bottom: 1px solid $color-black;
+
+        &:hover {
+          color: $color-white;
+          background-color: $color-black;
+
+          .arrow {
+            border-left-color: $color-white;
+          }
+        }
+
+        .title {
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+        }
+
+        .arrow {
+          position: absolute;
+          right: 14px;
+          border: 6px solid transparent;
+          border-left: 6px solid $color-blue;
+        }
+      }
+    }
+  }
+
+  .sidebar-second {
+    position: absolute;
+    top: 61px;
+    left: 160px;
+    width: 160px;
+    height: calc(100vh - 62px);
+    border: 1px solid $color-black;
+
+    @include media(">phone") {
+      left: 217px;
+      width: 215px;
+    }
+
+    .list {
+      margin: 0;
+
+      .item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        padding-left: 17px;
+        cursor: pointer;
+        border-bottom: 1px solid $color-black;
+
+        &:hover {
+          color: $color-white;
+          background-color: $color-black;
+        }
+
+        .title {
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+        }
+      }
+    }
+  }
+
+  .selected {
+    color: $color-white;
+    background-color: $color-black;
+
+    .arrow {
+      border-left-color: $color-white !important;
+    }
+  }
+}

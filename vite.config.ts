@@ -43,10 +43,9 @@ export default defineConfig(async ({ mode }) => {
     //     globPatterns: ['**/*.{js,css,ico,png,svg,json,vue,txt,woff2}']
     //   },
     //   manifest: {
-    //     name: 'Qiwa',
-    //     short_name: 'QIWA',
-    //     description:
-    //       'Qiwa platform is an electronic platform that provides the Ministry of Human Resources and Social Development services and solutions to enhance the electronic services provided to the labor sector.',
+    //     name: 'Bloobloom',
+    //     short_name: 'BM',
+    //     description: '',
     //     theme_color: '#1c5a7d',
     //     background_color: '#52a8f2',
     //     display: 'standalone',

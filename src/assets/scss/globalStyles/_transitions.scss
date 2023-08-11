@@ -1,0 +1,19 @@
+.slide-enter-active,
+.slide-leave-active {
+  transition: all 0.3s ease-in;
+}
+
+.slide-enter-from,
+.slide-leave-to {
+  transform: translateX(-300px);
+}
+
+.slide-second-enter-active,
+.slide-second-leave-active {
+  transition: all 0.2s ease-in;
+}
+
+.slide-second-enter-from,
+.slide-second-leave-to {
+  transform: translateX(-300px);
+}
