@@ -1,6 +1,10 @@
 <template>
   <div class="spectacles">
-    <b-product-head title="Spectacles Women" />
+    <b-product-head
+      title="Spectacles Women"
+      @update:colour-updated="(coloursArr) => updateColours(coloursArr)"
+      @update:shape-updated="(shapesArr) => updateShapes(shapesArr)"
+    />
     <div v-if="productItems.length" class="list">
       <b-card-item
         v-for="item in productItems"
@@ -28,8 +32,23 @@ import { onMounted, ref } from 'vue'
 
 import Api from '@/api'
 import { Gender, GlassesType } from '@/api/types'
+import BProductHead from '@/components/functional/BproductHead/BProductHead.vue'
 import BCardItem from '@/components/ui/BCardItem.vue'
-import BProductHead from '@/components/ui/BProductHead.vue'
+
+const colours: any = ref([])
+const shapes: any = ref([])
+
+function updateColours(arr: any) {
+  productItems.value = []
+  colours.value = arr
+  load(infinite.value as unknown as StateHandler)
+}
+
+function updateShapes(arr: any) {
+  productItems.value = []
+  shapes.value = arr
+  load(infinite.value as unknown as StateHandler)
+}
 
 let productItems: any = ref([])
 let page = 1
@@ -38,7 +57,13 @@ const infinite = ref('infinite')
 
 const load = async ($state: StateHandler) => {
   try {
-    const { data } = await Api.getProductList(GlassesType.spectacles, Gender.women, `${page.toString()}`)
+    const { data } = await Api.getProductList(
+      GlassesType.spectacles,
+      Gender.women,
+      `${page.toString()}`,
+      colours.value,
+      shapes.value
+    )
     const response: any = camelcaseKeysDeep(data)
     meta.value = response.meta.totalCount
     if (productItems.value.length >= meta.value) {
