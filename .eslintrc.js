@@ -30,6 +30,7 @@ module.exports = {
     'vue/multi-word-component-names': 0,
     'vue/no-template-shadow': 0,
     'no-console': 'error',
+    '@typescript-eslint/no-explicit-any': 'off', // included because I don't want to describe api types
     'vue/no-parsing-error': [
       'error',
       {

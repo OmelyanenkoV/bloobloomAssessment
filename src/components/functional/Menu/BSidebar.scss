@@ -54,6 +54,7 @@
     position: fixed;
     top: 61px;
     left: 160px;
+    z-index: 700;
     width: 160px;
     height: calc(100vh - 62px);
     background-color: $color-white;
