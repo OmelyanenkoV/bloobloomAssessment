@@ -1,10 +1,14 @@
 .slide-enter-active,
 .slide-leave-active {
+  position: fixed;
+  z-index: 10000;
   transition: all 0.3s ease-in;
 }
 
 .slide-enter-from,
 .slide-leave-to {
+  position: fixed;
+  z-index: 10000;
   transform: translateX(-300px);
 }
 
@@ -15,5 +19,7 @@
 
 .slide-second-enter-from,
 .slide-second-leave-to {
+  position: relative;
+  z-index: 10000;
   transform: translateX(-300px);
 }
