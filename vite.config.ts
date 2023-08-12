@@ -19,15 +19,9 @@ export default defineConfig(async ({ mode }) => {
       custom: {
         families: [
           {
-            name: 'IBM Plex Sans',
-            local: 'IBM Plex Sans',
-            src: [
-              './src/assets/fonts/IBMPlexSansArabic/IBMPlexSansArabic-Light.woff',
-              // './src/assets/fonts/IBMPlexSansArabic/IBMPlexSansArabic-Medium.woff',
-              // './src/assets/fonts/IBMPlexSansArabic/IBMPlexSansArabic-Regular.woff',
-              // './src/assets/fonts/IBMPlexSansArabic/IBMPlexSansArabic-Bold.woff'
-              './node_modules/@quasar/extras/material-icons/web-font/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2'
-            ]
+            name: 'Roboto',
+            local: 'Roboto',
+            src: ['./src/assets/fonts/Roboto/Roboto-Light.ttf', './src/assets/fonts/Roboto/Roboto-Bold.ttf']
           }
         ],
         display: 'auto',
@@ -90,6 +84,7 @@ export default defineConfig(async ({ mode }) => {
       port: 8084,
       host: host
     },
-    plugins
+    plugins,
+    base: '/bloobloomAssessment/'
   }
 })
