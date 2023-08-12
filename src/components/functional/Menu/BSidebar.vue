@@ -59,7 +59,7 @@ const sidebarListMain: SidebarItemMain[] = [
     expand: true,
     subMenu: [
       { id: 1, title: 'Women', routeName: RouteNames.spectaclesWomen },
-      { id: 2, title: 'Man', routeName: RouteNames.spectaclesMan }
+      { id: 2, title: 'Men', routeName: RouteNames.spectaclesMen }
     ]
   },
   {
@@ -67,8 +67,8 @@ const sidebarListMain: SidebarItemMain[] = [
     title: 'Sunglasses',
     expand: true,
     subMenu: [
-      { id: 1, title: 'Women 2', routeName: RouteNames.sunglassesWomen },
-      { id: 2, title: 'Man 2', routeName: RouteNames.sunglassesMan }
+      { id: 1, title: 'Women', routeName: RouteNames.sunglassesWomen },
+      { id: 2, title: 'Men', routeName: RouteNames.sunglassesMen }
     ]
   },
   { id: 3, title: 'Home tray on', expand: false },

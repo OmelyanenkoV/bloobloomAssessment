@@ -18,14 +18,14 @@ export const routes = [
         component: lazyLoading('Sunglasses', 'Women')
       },
       {
-        path: RoutePaths.spectaclesMan,
-        name: RouteNames.spectaclesMan,
-        component: lazyLoading('Spectacles', 'Man')
+        path: RoutePaths.spectaclesMen,
+        name: RouteNames.spectaclesMen,
+        component: lazyLoading('Spectacles', 'Men')
       },
       {
-        path: RoutePaths.sunglassesMan,
-        name: RouteNames.sunglassesMan,
-        component: lazyLoading('Sunglasses', 'Man')
+        path: RoutePaths.sunglassesMen,
+        name: RouteNames.sunglassesMen,
+        component: lazyLoading('Sunglasses', 'Men')
       },
       {
         path: '/:pathMatch*',

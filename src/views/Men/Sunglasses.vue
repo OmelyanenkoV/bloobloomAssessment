@@ -1,5 +1,5 @@
 <template>
-  <div>Sunglasses Man</div>
+  <div>Sunglasses Men</div>
 </template>
 
 <script setup lang="ts"></script>
