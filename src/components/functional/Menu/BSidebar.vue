@@ -22,6 +22,7 @@
           <li
             v-for="item in secondaryMenuItem.subMenu"
             :key="item.id"
+            data-test-id="subMenu"
             class="item"
             @click="router.push({ name: item.routeName })"
           >
@@ -36,12 +37,12 @@
 <script setup lang="ts">
 import { useWindowSize } from '@vueuse/core/index'
 import { computed, Ref, ref } from 'vue'
+import { useRouter } from 'vue-router'
 
 import { SidebarItemMain } from '@/components/functional/Menu/types'
 import { RouteNames } from '@/router/enums'
 import { useSidebar } from '@/store/Sidebar'
 import { Breakpoints } from '@/utils/breakpoints'
-import { useRouter } from 'vue-router'
 
 const { width } = useWindowSize()
 const sidebar = useSidebar()

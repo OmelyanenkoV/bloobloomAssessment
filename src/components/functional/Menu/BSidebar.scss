@@ -1,6 +1,6 @@
 .sidebars {
   .sidebar-first {
-    position: absolute;
+    position: fixed;
     top: 61px;
     left: 0;
     z-index: 1100;
@@ -51,11 +51,12 @@
   }
 
   .sidebar-second {
-    position: absolute;
+    position: fixed;
     top: 61px;
     left: 160px;
     width: 160px;
     height: calc(100vh - 62px);
+    background-color: $color-white;
     border: 1px solid $color-black;
 
     @include media(">phone") {

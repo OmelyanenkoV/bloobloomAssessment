@@ -20,6 +20,5 @@ const sidebar = useSidebar()
 .main {
   height: calc(100vh - 63px);
   padding-top: 61px;
-  border: 1px solid red;
 }
 </style>
