@@ -1,0 +1,1 @@
+import{f as e,o as s}from "./vendor-32df7c5d.js";import{_ as c}from "./index-da6001b0.js";const o={};function t(n, l){return s(),e("div",null,"Spectacles Men")}const _=c(o,[["render",t],["__file","/Users/vladislavomelyanenko/Documents/test/bloobloomAssessment/src/views/Men/Spectacles.vue"]]);export{_ as default};

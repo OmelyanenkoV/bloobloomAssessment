@@ -1,0 +1,1 @@
+import{f as e,o as s}from "./vendor-32df7c5d.js";import{_ as n}from "./index-da6001b0.js";const o={};function t(l, r){return s(),e("div",null,"Sunglasses Men")}const _=n(o,[["render",t],["__file","/Users/vladislavomelyanenko/Documents/test/bloobloomAssessment/src/views/Men/Sunglasses.vue"]]);export{_ as default};
