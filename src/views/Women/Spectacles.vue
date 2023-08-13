@@ -28,29 +28,29 @@
 import camelcaseKeysDeep from 'camelcase-keys-deep'
 import InfiniteLoading from 'v3-infinite-loading'
 import { StateHandler } from 'v3-infinite-loading/lib/types'
-import { onMounted, ref } from 'vue'
+import { onMounted, Ref, ref } from 'vue'
 
 import Api from '@/api'
 import { Gender, GlassesType } from '@/api/types'
 import BProductHead from '@/components/functional/BproductHead/BProductHead.vue'
 import BCardItem from '@/components/ui/BCardItem.vue'
 
-const colours: any = ref([])
-const shapes: any = ref([])
+const colours: Ref<string[]> = ref([])
+const shapes: Ref<string[]> = ref([])
 
-function updateColours(arr: any) {
+function updateColours(arr: string[]) {
   productItems.value = []
   colours.value = arr
   load(infinite.value as unknown as StateHandler)
 }
 
-function updateShapes(arr: any) {
+function updateShapes(arr: string[]) {
   productItems.value = []
   shapes.value = arr
   load(infinite.value as unknown as StateHandler)
 }
 
-let productItems: any = ref([])
+let productItems: any = ref([]) // any cos I don't want to type huge object from BE side
 let page = 1
 let meta = ref(0)
 const infinite = ref('infinite')
@@ -64,7 +64,7 @@ const load = async ($state: StateHandler) => {
       colours.value,
       shapes.value
     )
-    const response: any = camelcaseKeysDeep(data)
+    const response: any = camelcaseKeysDeep(data) // any cos I don't want to type huge object from BE side
     meta.value = response.meta.totalCount
     if (productItems.value.length >= meta.value) {
       $state.complete()

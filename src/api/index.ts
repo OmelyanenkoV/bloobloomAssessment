@@ -10,8 +10,8 @@ export default {
     type: GlassesType = GlassesType.spectacles,
     gender: Gender = Gender.women,
     pageNumber: string = '1',
-    colours: [],
-    shapes: []
+    colours: string[],
+    shapes: string[]
   ) {
     const paramValuesColor = colours
       .map((colour) => `filters[glass_variant_frame_variant_colour_tag_configuration_names][]=${colour}`)
