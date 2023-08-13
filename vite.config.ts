@@ -85,6 +85,6 @@ export default defineConfig(async ({ mode }) => {
       host: host
     },
     plugins,
-    base: '/bloobloomAssessment/'
+    base: '/'
   }
 })

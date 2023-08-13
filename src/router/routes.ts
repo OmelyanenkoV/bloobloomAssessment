@@ -32,5 +32,9 @@ export const routes = [
         redirect: { name: RouteNames.spectaclesWomen }
       }
     ]
+  },
+  {
+    path: '/:pathMatch*',
+    redirect: { name: RouteNames.spectaclesWomen }
   }
 ]
