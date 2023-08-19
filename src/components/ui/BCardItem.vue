@@ -3,7 +3,7 @@
     <div class="title">
       <h2>{{ props.title }}</h2>
     </div>
-    <img :src="imgPath" alt="" width="460" height="345" />
+    <img :src="imgPath" :alt="props.title" width="460" height="345" />
   </div>
 </template>
 

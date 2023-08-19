@@ -98,6 +98,10 @@ onMounted(() => {
       grid-template-columns: repeat(3, 1fr);
     }
 
+    @include media('>largescreen') {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
     .card {
       height: 353px;
     }
